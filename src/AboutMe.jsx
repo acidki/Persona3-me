@@ -16,8 +16,8 @@ const MAIN_IMAGES = [mainm, mainm2, mainf];
 
 const REVEAL_CONTENT = [
   {
-    upper: ["name moneybagg", "age:23"],
-    lower: "major: computer science",
+    upper: ["name Sudipto Chakraborty Suvo ", "age:20"],
+    lower: "Bachalor's: computer science",
   },
   {
     upper: [
@@ -45,27 +45,27 @@ const ROLES = [
 
 const ITEMS = [
   {
-    id: "twitch", label: "ABOUT ME", handle: "@yourname", href: "https://twitch.tv/yourname", icon: "🎮", barIcon: icon1, bars: 1, newBars: [0], counts: ["56"],
-    links: ["twitch.tv/videos/2041837265"],
+    id: "Discord", label: "ABOUT ME", handle: "@acid_here", href: "https://discord.com/users/acid_here", icon: "🎮", barIcon: icon1, bars: 1, newBars: [0], counts: ["56"],
+    links: ["https://discord.com/users/acid_here"],
     stats: [
-      { tag: "FOL", value: "1.2K", color: "#9147ff" },
-      { tag: "VWR", value: "042",  color: "#bf94ff" },
+      { tag: "FRD", value: "24", color: "#9147ff" },
+      { tag: "VWR", value: "N/A",  color: "#bf94ff" },
     ],
   },
   {
-    id: "instagram", label: "FUN FACT ABOUT ME", handle: "@yourhandle", href: "https://instagram.com/yourhandle", icon: "📷", barIcon: icon2, bars: 5, newBars: [1, 2], counts: ["3.4M", "2.5M", "676K", "412K", "198K"],
+    id: "Instagram", label: "FUN FACT ABOUT ME", handle: "@acid_in_twilight", href: "https://www.instagram.com/acid_in_twilight/?hl=en", icon: "📷", barIcon: icon2, bars: 5, newBars: [1, 2], counts: ["3.4M", "2.5M", "676K", "412K", "198K"],
     links: ["instagram.com/p/C4xQmRrNk2a", "instagram.com/p/C3wLpBsOj7f", "instagram.com/reel/C2vKoArMi6e", "instagram.com/p/C1uJnZqLh5d", "instagram.com/reel/C0tImYpKg4c"],
     stats: [
-      { tag: "FOL", value: "3.4K", color: "#e1306c" },
-      { tag: "PST", value: "128",  color: "#f77737" },
+      { tag: "FOL", value: "134", color: "#e1306c" },
+      { tag: "PST", value: "51",  color: "#f77737" },
     ],
   },
   {
-    id: "tiktok", label: "WIRED FACT ABOUT ME", handle: "@yourhandle", href: "https://tiktok.com/@yourhandle", icon: "🎵", barIcon: icon3, bars: 7, newBars: [0, 3, 5, 6], counts: ["5.1M", "3.7M", "2.2M", "1.4M", "831K", "490K", "217K"],
-    links: ["tiktok.com/@yourhandle/video/7318492016374859054", "tiktok.com/@yourhandle/video/7305837261940183342", "tiktok.com/@yourhandle/video/7291046385720348974", "tiktok.com/@yourhandle/video/7278392047163820334", "tiktok.com/@yourhandle/video/7264819203847165742", "tiktok.com/@yourhandle/video/7251047382916430126", "tiktok.com/@yourhandle/video/7237294018463851822"],
+    id: "Facebook", label: "WIRED FACT ABOUT ME", handle: "Sudipto Chakraborty Suvo (Acid)", href: "https://www.facebook.com/Acidki", icon: "🎵", barIcon: icon3, bars: 7, newBars: [0, 3, 5, 6], counts: ["5.1M", "3.7M", "2.2M", "1.4M", "831K", "490K", "217K"],
+    links: ["https://www.facebook.com/share/p/1HhzPLD5um/", "https://www.facebook.com/share/p/18YsdJXA81/"],
     stats: [
-      { tag: "FOL", value: "8.9K", color: "#00f2ea" },
-      { tag: "LKS", value: "52K",  color: "#ff0050" },
+      { tag: "FRD", value: "689", color: "#00f2ea" },
+      { tag: "FLW", value: "881",  color: "#ff0050" },
     ],
   },
 ];
