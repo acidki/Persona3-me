@@ -17,8 +17,10 @@ import './App.css'
 function MenuScreen() {
   const navigate = useNavigate();
   
-  // This central logic handles where each button goes
   const handleNavigate = (pageId) => {
+    console.log("App received navigation request for:", pageId);
+    if (!pageId) return;
+
     if (pageId === "github") {
       window.open("https://github.com/acidki", "_blank");
     } else {
