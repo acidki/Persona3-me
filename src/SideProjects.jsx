@@ -39,7 +39,7 @@ export default function SideProjects() {
     const onKey = (e) => {
       if (e.key === "ArrowUp") setActive(i => Math.max(0, i - 1));
       if (e.key === "ArrowDown") setActive(i => Math.min(ITEMS.length - 1, i + 1));
-      if (e.key === "Escape" || e.key === "Backspace") navigate("/");
+      if (e.key === "Escape" || e.key === "Backspace" || e.key === "ArrowLeft") navigate("/");
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -48,7 +48,8 @@ export default function SideProjects() {
   return (
     <div id="menu-screen">
       <video src={bgVideo} autoPlay loop muted playsInline />
-      <div className="proj-root" style={{ position: 'absolute', inset: 0, display: 'flex', padding: '50px', z-index: 10 }}>
+      {/* FIXED zIndex LINE BELOW */}
+      <div className="proj-root" style={{ position: 'absolute', inset: 0, display: 'flex', padding: '50px', zIndex: 10 }}>
         {/* List side */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px' }}>
           {ITEMS.map((item, i) => (
@@ -62,7 +63,8 @@ export default function SideProjects() {
                 clipPath: 'polygon(0 0, 95% 0, 100% 100%, 5% 100%)',
                 cursor: 'pointer',
                 fontFamily: 'Anton, sans-serif',
-                fontSize: '30px'
+                fontSize: '30px',
+                transition: 'all 0.2s ease'
               }}
             >
               {item.label}
@@ -71,10 +73,14 @@ export default function SideProjects() {
         </div>
         {/* Detail side */}
         <div style={{ flex: 1.5, background: 'rgba(0,0,50,0.8)', padding: '40px', color: '#fff', borderLeft: '5px solid #c4001a' }}>
-          <h1 style={{ fontFamily: 'Anton', fontSize: '50px', color: '#a5f6ff' }}>{ITEMS[active].label}</h1>
-          <h2 style={{ fontFamily: 'Bebas Neue', color: '#ccc' }}>{ITEMS[active].subtitle}</h2>
+          <h1 style={{ fontFamily: 'Anton', fontSize: '50px', color: '#a5f6ff', textTransform: 'uppercase' }}>{ITEMS[active].label}</h1>
+          <h2 style={{ fontFamily: 'Bebas Neue', color: '#ccc', fontSize: '24px' }}>{ITEMS[active].subtitle}</h2>
           <ul style={{ marginTop: '30px', listStyle: 'none', padding: 0 }}>
-            {ITEMS[active].details.map((d, i) => <li key={i} style={{ marginBottom: '10px', fontSize: '18px' }}>- {d}</li>)}
+            {ITEMS[active].details.map((d, i) => (
+              <li key={i} style={{ marginBottom: '15px', fontSize: '20px', fontFamily: 'Montserrat, sans-serif' }}>
+                <span style={{ color: '#c4001a', marginRight: '10px' }}>▶</span> {d}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
