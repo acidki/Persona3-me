@@ -48,40 +48,43 @@ export default function SideProjects() {
   return (
     <div id="menu-screen">
       <video src={bgVideo} autoPlay loop muted playsInline />
-      {/* FIXED zIndex LINE BELOW */}
       <div className="proj-root" style={{ position: 'absolute', inset: 0, display: 'flex', padding: '50px', zIndex: 10 }}>
-        {/* List side */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px' }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '15px' }}>
           {ITEMS.map((item, i) => (
             <div 
               key={item.id} 
               onMouseEnter={() => setActive(i)}
               style={{ 
-                background: active === i ? '#fff' : '#111', 
+                background: active === i ? '#fff' : 'rgba(0,0,0,0.7)', 
                 color: active === i ? '#000' : '#fff',
-                padding: '20px',
+                padding: '15px 30px',
                 clipPath: 'polygon(0 0, 95% 0, 100% 100%, 5% 100%)',
                 cursor: 'pointer',
                 fontFamily: 'Anton, sans-serif',
-                fontSize: '30px',
-                transition: 'all 0.2s ease'
+                fontSize: '28px',
+                transition: 'all 0.2s ease',
+                transform: active === i ? 'translateX(10px)' : 'translateX(0)'
               }}
             >
               {item.label}
             </div>
           ))}
         </div>
-        {/* Detail side */}
-        <div style={{ flex: 1.5, background: 'rgba(0,0,50,0.8)', padding: '40px', color: '#fff', borderLeft: '5px solid #c4001a' }}>
-          <h1 style={{ fontFamily: 'Anton', fontSize: '50px', color: '#a5f6ff', textTransform: 'uppercase' }}>{ITEMS[active].label}</h1>
-          <h2 style={{ fontFamily: 'Bebas Neue', color: '#ccc', fontSize: '24px' }}>{ITEMS[active].subtitle}</h2>
-          <ul style={{ marginTop: '30px', listStyle: 'none', padding: 0 }}>
+        <div style={{ flex: 1.5, background: 'rgba(5, 15, 50, 0.9)', padding: '40px', color: '#fff', borderLeft: '8px solid #c4001a', height: 'fit-content', marginTop: 'auto', marginBottom: 'auto' }}>
+          <h1 style={{ fontFamily: 'Anton', fontSize: '50px', color: '#a5f6ff', margin: 0 }}>{ITEMS[active].label}</h1>
+          <h2 style={{ fontFamily: 'Bebas Neue', color: '#ff5e88', fontSize: '24px', letterSpacing: '2px' }}>{ITEMS[active].subtitle}</h2>
+          <div style={{ marginTop: '20px' }}>
             {ITEMS[active].details.map((d, i) => (
-              <li key={i} style={{ marginBottom: '15px', fontSize: '20px', fontFamily: 'Montserrat, sans-serif' }}>
-                <span style={{ color: '#c4001a', marginRight: '10px' }}>▶</span> {d}
-              </li>
+              <p key={i} style={{ fontFamily: 'Montserrat', fontSize: '18px', marginBottom: '10px' }}>
+                <span style={{ color: '#c4001a', fontWeight: 'bold' }}>//</span> {d}
+              </p>
             ))}
-          </ul>
+          </div>
+          <div style={{ marginTop: '30px', display: 'flex', gap: '40px', borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '20px' }}>
+            <div><div style={{ fontSize: '12px', color: '#c4001a' }}>RANK</div><div style={{ fontSize: '30px', fontFamily: 'Anton' }}>{ITEMS[active].stats.rank}</div></div>
+            <div><div style={{ fontSize: '12px', color: '#c4001a' }}>IMPACT</div><div style={{ fontSize: '30px', fontFamily: 'Anton' }}>{ITEMS[active].stats.impact}</div></div>
+            <div><div style={{ fontSize: '12px', color: '#c4001a' }}>STATUS</div><div style={{ fontSize: '30px', fontFamily: 'Anton' }}>{ITEMS[active].stats.progress}</div></div>
+          </div>
         </div>
       </div>
     </div>
