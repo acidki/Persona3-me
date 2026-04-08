@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 
 const ITEMS = [
-  { id: "about",   label: "ABOUT ME",      page: "about",   fontSize: 80, offsetX: 0,  offsetY: 0,  skew: -6,  skewY: 10  },
-  { id: "resume",  label: "RESUME",        page: "resume",  fontSize: 66, offsetX: 20, offsetY: 8,  skew: -11, skewY: -10 },
-  { id: "github",  label: "GITHUB LINK",   page: "github",  fontSize: 68, offsetX: 8, offsetY: 6,  skew: 0, skewY: -4  },
-  { id: "socials", label: "SOCIALS",       page: "socials", fontSize: 74, offsetX: 16, offsetY: 8,  skew: -3,  skewY: 5   },
-  { id: "sideproj",label: "SIDE PROJECTS", page: "sideproj",fontSize: 56, offsetX: 10, offsetY: 6,  skew: -4,  skewY: 7   },
+  { id: "about",  label: "ABOUT ME",    href: "#about",  fontSize: 130, offsetX: 0,  offsetY: 0  },
+  { id: "resume", label: "RESUME",      href: "#resume", fontSize: 108, offsetX: 38, offsetY: -8 },
+  { id: "github", label: "GITHUB LINK", href: "https://github.com/acidki", fontSize: 88, offsetX: 14, offsetY: -6 },
+  { id: "socials", label: "SOCIALS",    href: "#socials", fontSize: 75, offsetX: 45, offsetY: -4 },
+  { id: "projects", label: "SIDE PROJECTS", href: "#projects", fontSize: 65, offsetX: 20, offsetY: -2 },
 ];
 
+// Add more shapes if you have more than 3 items
 const CLIP_SHAPES = [
-  (w, h) => `polygon(0px 0px, ${w}px ${h * 0.5}px, 0px ${h}px)`,
-  (w, h) => `polygon(0px 0px, ${w}px ${h * 0.5}px, 0px ${h}px)`,
-  (w, h) => `polygon(0px 0px, ${w}px ${h * 0.5}px, 0px ${h}px)`,
-  (w, h) => `polygon(0px 0px, ${w}px ${h * 0.5}px, 0px ${h}px)`,
-  (w, h) => `polygon(0px 0px, ${w}px ${h * 0.5}px, 0px ${h}px)`,
+  (w, h) => `polygon(0px ${h*0.06}px, ${w - h*0.55}px 0px, ${w}px ${h*0.42}px, ${w - h*0.18}px ${h}px, 0px ${h*0.94}px)`,
+  (w, h) => `polygon(${h*0.12}px 0px, ${w - h*0.3}px ${h*0.04}px, ${w}px ${h*0.5}px, ${w - h*0.08}px ${h}px, 0px ${h*0.88}px)`,
+  (w, h) => `polygon(0px ${h*0.1}px, ${w - h*0.4}px 0px, ${w}px ${h*0.45}px, ${w - h*0.25}px ${h}px, ${h*0.05}px ${h*0.9}px)`,
+  (w, h) => `polygon(0px 0px, 100% 10%, 95% 100%, 5% 90%)`, // Shape for Socials
+  (w, h) => `polygon(5% 5%, 100% 0px, 90% 95%, 0px 100%)`,   // Shape for Projects
 ];
 
 export default function P3Menu({ onNavigate }) {
