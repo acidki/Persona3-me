@@ -21,19 +21,19 @@ const REVEAL_CONTENT = [
   },
   {
     upper: [
-      "Cleopatra lived closer to the Moon landing than to the building of the pyramids.",
-      "Vikings kept cats on ships for pest control (and vibes).",
-      "In medieval Europe, animals could be put on trial for crimes",
+      "I Love Watching Anime",
+      "I get excited when someone talks about Space or Aeronautics stuff.",
+      "I also love aviation related stuffs , I play Football and I love playing video games and watching movies",
     ],
-    lower: "abbove is some history fun fact",
+    lower: "These are the fun facts about me",
   },
   {
     upper: [
-      "Oxford University founding is older than the Aztec Empire.",
-      "The shortest war in history lasted 38–45 minutes (Britain vs Zanzibar).",
-      "Humans have been writing for ~5,000 years",
+      "I don't have a sweet tooth when it comes to food items.",
+      "Sometimes I get nerdy when someone talks about a topic I know pretty well about.",
+      "I can get boring sometimes",
     ],
-    lower: "yes it's a place holder",
+    lower: "These are the weird facts about me",
   },
 ];
 
