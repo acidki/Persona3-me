@@ -2,22 +2,49 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ITEMS = [
-  { id: "i", badge: "I", title: "EDUCATION", subtitle: "University / Coursework", rank: 3 },
-  { id: "ii", badge: "II", title: "SKILLS", subtitle: "Frontend / Design / UI", rank: 4 },
-  { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Featured Work", rank: 5 },
-  { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "Internships / Roles", rank: 2 },
+  { id: "i", badge: "I", title: "EDUCATION", subtitle: "Daffodil Intl. University", rank: 3 },
+  { id: "ii", badge: "II", title: "SKILLS", subtitle: "C / Linux / Godot / Arduino", rank: 5 },
+  { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Deskbot / Godot Runner", rank: 5 },
+  { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "NASA Apps / Prompt Battle", rank: 4 },
 ];
 
-const EDUCATION_ROWS = [
-  { index: "01", title: "General Education", status: "Complete" },
-  { index: "02", title: "Computer Science Core", status: "In Progress" },
-  { index: "03", title: "Elective Track", status: "Queued" },
-  { index: "04", title: "Capstone Prep", status: "Pending" },
+const DATA = {
+  education: [
+    { index: "01", title: "B.Sc. in CSE", status: "Ongoing" },
+    { index: "02", title: "DIU YKSG-1 Hall", status: "Resident" },
+    { index: "03", title: "Computer Science Core", status: "Active" },
+    { index: "04", title: "NASA Space Apps 2024", status: "Participant" },
+  ],
+  skills: [
+    { index: "01", title: "C Programming", status: "Expert" },
+    { index: "02", title: "Linux (Ubuntu)", status: "Advanced" },
+    { index: "03", title: "Godot Engine (GDScript)", status: "Intermediate" },
+    { index: "04", title: "Arduino / Hardware", status: "Intermediate" },
+  ],
+  projects: [
+    { index: "01", title: "Arduino Deskbot", status: "Building" },
+    { index: "02", title: "2D Endless Runner", status: "Complete" },
+    { index: "03", title: "Terminal CV Website", status: "Deployed" },
+    { index: "04", title: "Minecraft Cinematics", status: "Hobby" },
+  ],
+  experience: [
+    { index: "01", title: "DIU Prompt Battle", status: "8th Place" },
+    { index: "02", title: "NASA Space Apps", status: "2024" },
+    { index: "03", title: "Section 70_G Football", status: "Organizer" },
+    { index: "04", title: "Iftar Party Event", status: "Coordinator" },
+  ]
+};
+
+const DETAILS = [
+  "Pursuing Computer Science with a focus on problem-solving and embedded systems.",
+  "Passionate about open-source tools, Linux customization, and game mechanics.",
+  "Building interactive hardware inspired by Eilik using Arduino and TFT displays.",
+  "Active participant in tech competitions and university community organizing."
 ];
 
 export default function ResumePage({ src }) {
   const navigate = useNavigate();
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -29,13 +56,19 @@ export default function ResumePage({ src }) {
     const onKey = (e) => {
       if (e.key === "ArrowUp") setActive((i) => Math.max(0, i - 1));
       if (e.key === "ArrowDown") setActive((i) => Math.min(ITEMS.length - 1, i + 1));
-      if (e.key === "ArrowLeft") navigate(-1);
-      if (e.key === "Escape" || e.key === "Backspace") navigate(-1);
+      if (e.key === "ArrowLeft" || e.key === "Escape" || e.key === "Backspace") navigate(-1);
     };
-
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [navigate]);
+
+  // Helper to get the correct data array based on active index
+  const getActiveData = () => {
+    if (active === 0) return DATA.education;
+    if (active === 1) return DATA.skills;
+    if (active === 2) return DATA.projects;
+    return DATA.experience;
+  };
 
   return (
     <div id="menu-screen">
@@ -257,15 +290,6 @@ export default function ResumePage({ src }) {
             16px 16px 0 rgba(0, 6, 30, 0.55);
           overflow: hidden;
         }
-        .resume-detail-panel::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background:
-            linear-gradient(135deg, rgba(133, 244, 255, 0.08) 0 15%, transparent 15% 100%),
-            linear-gradient(180deg, rgba(255,255,255,0.05), transparent 24%);
-          pointer-events: none;
-        }
         .resume-detail-top {
           position: relative;
           display: grid;
@@ -313,32 +337,23 @@ export default function ResumePage({ src }) {
           background: rgba(8, 18, 72, 0.96);
           clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
           box-shadow: inset 0 0 0 1px rgba(140, 239, 255, 0.12);
-          transition: transform 0.16s ease, background 0.16s ease;
-        }
-        .resume-detail-row:hover {
-          transform: translateX(4px);
-          background: rgba(12, 26, 94, 1);
         }
         .resume-detail-row-index {
           font-family: 'Bebas Neue', sans-serif;
           font-size: 26px;
-          letter-spacing: 1px;
           color: #94f4ff;
         }
         .resume-detail-row-title {
           font-family: 'Anton', sans-serif;
           font-size: 28px;
-          line-height: 1;
           color: #f2fcff;
         }
         .resume-detail-status {
           font-family: 'Bebas Neue', sans-serif;
-          font-size: 22px;
-          line-height: 1;
-          letter-spacing: 1.1px;
+          font-size: 20px;
           color: #06133b;
           background: #8df6ff;
-          padding: 7px 12px;
+          padding: 4px 10px;
           clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
         }
         .resume-detail-bottom {
@@ -352,38 +367,27 @@ export default function ResumePage({ src }) {
         .resume-detail-bottom-title {
           font-family: 'Bebas Neue', sans-serif;
           font-size: 30px;
-          letter-spacing: 2px;
           color: #91f5ff;
-          margin-bottom: 14px;
-        }
-        .resume-detail-bullets {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+          margin-bottom: 10px;
         }
         .resume-detail-bullet {
           font-family: 'Anton', sans-serif;
-          font-size: 21px;
-          line-height: 1.15;
+          font-size: 19px;
           color: #edfaff;
+          margin-bottom: 6px;
         }
-
       `}</style>
 
       <div className="resume-overlay">
         <div className="resume-stack">
-          <div className={`resume-list-tag${mounted ? " mounted" : ""}`}>LIST</div>
+          <div className={`resume-list-tag${mounted ? " mounted" : ""}`}>DATA</div>
           {ITEMS.map((item, index) => (
             <div
               key={item.id}
               className={`resume-card-wrap${active === index ? " active" : ""}${mounted ? " mounted" : ""}`}
               style={{ transitionDelay: `${index * 55}ms` }}
-              onMouseEnter={() => {
-                setActive(index);
-              }}
-              onClick={() => {
-                setActive(index);
-              }}
+              onMouseEnter={() => setActive(index)}
+              onClick={() => setActive(index)}
             >
               <div className="resume-card">
                 <div className="resume-badge">
@@ -392,7 +396,7 @@ export default function ResumePage({ src }) {
                 <div className="resume-card-inner">
                   <div className="resume-title">{item.title}</div>
                   <div className="resume-rank">
-                    <div className="resume-rank-label">RANK</div>
+                    <div className="resume-rank-label">LVL</div>
                     <div className="resume-rank-number">{item.rank}</div>
                   </div>
                 </div>
@@ -404,35 +408,31 @@ export default function ResumePage({ src }) {
           ))}
         </div>
 
-        {active === 0 && (
-          <div className="resume-detail-panel">
-            <div className="resume-detail-top">
-              <div className="resume-detail-top-index">01</div>
-              <div className="resume-detail-top-title">EDUCATION LOG</div>
-              <div className="resume-detail-top-progress">7/5</div>
-            </div>
+        <div className="resume-detail-panel">
+          <div className="resume-detail-top">
+            <div className="resume-detail-top-index">{active + 1 < 10 ? `0${active + 1}` : active + 1}</div>
+            <div className="resume-detail-top-title">{ITEMS[active].title} LOG</div>
+            <div className="resume-detail-top-progress">S.C.</div>
+          </div>
 
-            <div className="resume-detail-list">
-              {EDUCATION_ROWS.map((row) => (
-                <div className="resume-detail-row" key={row.index}>
-                  <div className="resume-detail-row-index">{row.index}</div>
-                  <div className="resume-detail-row-title">{row.title}</div>
-                  <div className="resume-detail-status">{row.status}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="resume-detail-bottom">
-              <div className="resume-detail-bottom-title">DETAILS</div>
-              <div className="resume-detail-bullets">
-                <div className="resume-detail-bullet">- Maintain progress across required classes and supporting work.</div>
-                <div className="resume-detail-bullet">- Track portfolio-ready projects tied to coursework and labs.</div>
-                <div className="resume-detail-bullet">- Keep materials prepared for internships, research, and review.</div>
+          <div className="resume-detail-list">
+            {getActiveData().map((row) => (
+              <div className="resume-detail-row" key={row.index}>
+                <div className="resume-detail-row-index">{row.index}</div>
+                <div className="resume-detail-row-title">{row.title}</div>
+                <div className="resume-detail-status">{row.status}</div>
               </div>
+            ))}
+          </div>
+
+          <div className="resume-detail-bottom">
+            <div className="resume-detail-bottom-title">ANALYSIS</div>
+            <div className="resume-detail-bullets">
+              <div className="resume-detail-bullet">- {DETAILS[active]}</div>
+              <div className="resume-detail-bullet">- System status: Optimized for performance.</div>
             </div>
           </div>
-        )}
-
+        </div>
       </div>
     </div>
   );
