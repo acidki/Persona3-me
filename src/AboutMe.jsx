@@ -16,7 +16,7 @@ const MAIN_IMAGES = [mainm, mainm2, mainf];
 
 const REVEAL_CONTENT = [
   {
-    upper: ["name Sudipto Chakraborty Suvo ", "age:20"],
+    upper: ["Name: Sudipto Chakraborty Suvo ", "Age:20"],
     lower: "Bachalor's:  computer science & engineering",
   },
   {
