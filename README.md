@@ -14,9 +14,7 @@ A high-performance, interactive portfolio built with **React**, **Vite**, and **
 
 ## 🎬 System Preview
 
-<p align="center">
-<video src="vid67.mp4" width="100%" autoplay loop muted playsinline></video>
-</p>
+![System Navigation Preview](vid67.gif)
 
 ## 🛠️ Tech Stack
 
