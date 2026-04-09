@@ -1,62 +1,68 @@
-🎴 Persona 3 Interactive Portfolio
-sudipto-chakraborty.dev
-A high-performance, interactive portfolio built with React, Vite, and Framer Motion, inspired by the iconic UI aesthetics of Persona 3. This project features a terminal-style CV, smooth page transitions, and a custom-built navigation menu.
+# 🎴 Persona 3 Interactive Portfolio
 
-⚡ Features
-Persona 3 UI Aesthetics: Complete with slanted geometry, blue-hued overlays, and "Mission Log" styled project panels.
+### [sudipto-chakraborty.dev](https://www.google.com/search?q=https://sudipto-chakraborty.dev)
 
-Dual Interface: A beautiful React frontend for browser users and a planned curl accessible terminal version.
+A high-performance, interactive portfolio built with **React**, **Vite**, and **Framer Motion**, inspired by the iconic UI aesthetics of *Persona 3*. This project features smooth page transitions, high-fidelity video backgrounds, and a custom-built navigation menu system.
 
-Smooth Transitions: Utilizing framer-motion for that snappy, game-like menu feel.
+## ⚡ Features
 
-Interactive Resume: Categorized data logs for Education, Skills, and Experience.
+  * **Persona 3 UI Aesthetics:** Immersive interface with slanted geometry, blue-hued overlays, and "Mission Log" styled project panels.
+  * **Dynamic Navigation:** A custom circular menu system that reacts to keyboard and mouse inputs.
+  * **Smooth Transitions:** Utilizing `framer-motion` for snappy, game-like transitions between modules.
+  * **Interactive Resume:** Level-based data logs for Education, Skills, and Experience.
+  * **Custom Domain:** Fully deployed on a `.dev` domain with SSL via Vercel.
 
-Responsive Video Backgrounds: Immersive atmosphere using high-quality looped assets.
+## 🎬 System Preview
 
-🎬 Demo
-The system in action: Navigating through the Socials and Side Projects modules.
+*Navigating through the "Socials" and "Side Projects" modules.*
 
-🛠️ Tech Stack
-Frontend: React.js + Vite
+## 🛠️ Tech Stack
 
-Animations: Framer Motion
+  * **Frontend:** React.js + Vite
+  * **Animations:** Framer Motion
+  * **Routing:** React Router Dom
+  * **Deployment:** Vercel
+  * **DNS Management:** Name.com
 
-Routing: React Router Dom
+## 🚀 Installation & Setup
 
-Deployment: Vercel
+1.  **Clone the repository:**
 
-Domain: Name.com
+    ```bash
+    git clone https://github.com/acidki/Persona3-me.git
+    cd Persona3-me
+    ```
 
-🚀 Quick Install
-Clone the repository:
+2.  **Install dependencies:**
 
-Bash
-git clone https://github.com/acidki/Persona3-me.git
-cd Persona3-me
-Install dependencies:
+    ```bash
+    npm install
+    ```
 
-Bash
-npm install
-Run Development Server:
+3.  **Run Development Server:**
 
-Bash
-npm run dev
-Build for Production:
+    ```bash
+    npm run dev
+    ```
 
-Bash
-npm run build
-📂 Project Structure
-src/AboutMe.jsx - Personal facts and interests module.
+4.  **Build for Production:**
 
-src/ResumePage.jsx - Level-based skills and education log.
+    ```bash
+    npm run build
+    ```
 
-src/SideProjects.jsx - Hardware and software project "Operation Reports".
+## 📂 Project Structure
 
-src/P3Menu.jsx - The core navigation system.
+  * `src/AboutMe.jsx` - Personal facts and interest modules.
+  * `src/ResumePage.jsx` - Level-based skills and education log.
+  * `src/SideProjects.jsx` - Hardware/Software "Operation Reports."
+  * `src/P3Menu.jsx` - The core circular navigation system.
 
-🔗 Connect With Me
-Website: sudipto-chakraborty.dev
+## 🔗 Connection Links
 
-Discord: @acid_here
+  * **Website:** [sudipto-chakraborty.dev](https://www.google.com/search?q=https://sudipto-chakraborty.dev)
+  * **Discord:** `@acid_here`
+  * **Instagram:** [@moneybagg.py](https://www.instagram.com/moneybagg.py/)
 
-Instagram: @acid_in_twilight
+-----
+
