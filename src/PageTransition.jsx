@@ -98,7 +98,7 @@ function TransitionOverlay({ variant }) {
   if (variant === "about") return <AboutTransition />;
   if (variant === "resume") return <ResumeTransition />;
   if (variant === "socials") return <SocialsTransition />;
-  if (variant === "side_projects") return <SideProjectsTransition />;
+  if (variant === "sideprojects") return <SideProjectsTransition />;
   return <DefaultTransition />;
 }
 
