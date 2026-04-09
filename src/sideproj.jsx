@@ -10,9 +10,38 @@ const ITEMS = [
 
 const DATA = {
   education: [
-    { index: "01", title: "github.com/acidki" },
+    { index: "01", title: "TERMINAL CV WEBSITE", status: "Finished" },
+    { index: "02", title: "2D ENDLESS RUNNER GAME", status: "Demo Finished" },
+    { index: "03", title: "Deskbot", status: "Ongoing" },
+    { index: "04", title: "Persona Style CV Website", status: "Finished" },
   ],
- 
+  //skills: [
+    //{ index: "01", title: "C Programming", status: "Expert" },
+    //{ index: "02", title: "Linux (Ubuntu)", status: "Advanced" },
+    //{ index: "03", title: "Godot Engine (GDScript)", status: "Intermediate" },
+    //{ index: "04", title: "Arduino / Hardware", status: "Intermediate" },
+  //],
+  //projects: [
+    //{ index: "01", title: "Arduino Deskbot", status: "Building" },
+    //{ index: "02", title: "2D Endless Runner", status: "Complete" },
+    //{ index: "03", title: "Terminal CV Website", status: "Deployed" },
+    //{ index: "04", title: "Minecraft Cinematics", status: "Hobby" },
+  //],
+  //experience: [
+    //{ index: "01", title: "DIU Prompt Battle", status: "8th Place" },
+    //{ index: "02", title: "NASA Space Apps", status: "2024" },
+    //{ index: "03", title: "Section 70_G Football", status: "Organizer" },
+    //{ index: "04", title: "Iftar Party Event", status: "Coordinator" },
+  //]
+};//
+
+const DETAILS = [
+  "More in future",
+  //"Passionate about open-source tools, Linux customization, and game mechanics.",
+  //"Building interactive hardware inspired by Eilik using Arduino and TFT displays.",
+  //"Active participant in tech competitions and university community organizing."
+];
+
 export default function ResumePage({ src }) {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
