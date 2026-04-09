@@ -14,8 +14,12 @@ A high-performance, interactive portfolio built with **React**, **Vite**, and **
 
 ## 🎬 System Preview
 
-![System Navigation Preview](vid67.gif)
+<p align="center">
+<img src="vid67.gif" alt="System Navigation Preview" width="800">
 
+
+<i>Preview.</i>
+</p>
 ## 🛠️ Tech Stack
 
   * **Frontend:** React.js + Vite
