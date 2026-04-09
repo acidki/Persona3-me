@@ -27,8 +27,8 @@ const ITEMS = [
     ],
   },
   {
-    id: "instagram", label: "INSTAGRAM", handle: "@acid_in_twilight", href: "https://www.instagram.com/acid_in_twilight/?hl=en", icon: "📷", barIcon: icon2, bars: 5, newBars: [1, 2], counts: ["3.4M", "2.5M", "676K", "412K", "198K"],
-    links: ["instagram.com/p/C4xQmRrNk2a", "https://www.instagram.com/p/DRSf3WUkhGb/?hl=en&img_index=1", "https://www.instagram.com/p/DUDyfxgkqhP/?hl=en", "https://www.instagram.com/p/DVO7tMkk2-C/?hl=en&img_index=1", "https://www.instagram.com/p/DPlIaGtkvmE/?hl=en&img_index=1"],
+    id: "instagram", label: "INSTAGRAM", handle: "@acid_in_twilight", href: "https://www.instagram.com/acid_in_twilight/?hl=en", icon: "📷", barIcon: icon2, bars: 5, newBars: [1, 2], counts: ["00", "00", "00", "00", "00"],
+    links: ["instagram.com/p/C4xQmRrNk2a", "instagram.com/p/DRSf3WUkhGb/?hl=en&img_index=1", "instagram.com/p/DUDyfxgkqhP/?hl=en", "instagram.com/p/DVO7tMkk2-C/?hl=en&img_index=1", "instagram.com/p/DPlIaGtkvmE/?hl=en&img_index=1"],
     stats: [
       { tag: "FOL", value: "134", color: "#e1306c" },
       { tag: "PST", value: "51",  color: "#f77737" },
