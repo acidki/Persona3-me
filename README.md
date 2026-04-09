@@ -59,4 +59,4 @@ Website: sudipto-chakraborty.dev
 
 Discord: @acid_here
 
-Instagram: @moneybagg.py
+Instagram: @acid_in_twilight
