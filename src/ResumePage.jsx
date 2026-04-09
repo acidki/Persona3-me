@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ITEMS = [
-  { id: "i", badge: "I", title: "EDUCATION", subtitle: "Daffodil Intl. University", rank: 3 },
+  { id: "i", badge: "I", title: "EDUCATION", subtitle: "Daffodil International University", rank: 3 },
   { id: "ii", badge: "II", title: "SKILLS", subtitle: "C / Linux / Godot / Arduino", rank: 5 },
   { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Deskbot / Godot Runner", rank: 5 },
   { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "NASA Apps / Prompt Battle", rank: 4 },
@@ -11,7 +11,7 @@ const ITEMS = [
 const DATA = {
   education: [
     { index: "01", title: "B.Sc. in CSE", status: "Ongoing" },
-    { index: "02", title: "DIU YKSG-1 Hall", status: "Resident" },
+    { index: "02", title: "YKSG-1,Daffodil International University", status: "Resident" },
     { index: "03", title: "Computer Science Core", status: "Active" },
     { index: "04", title: "NASA Space Apps 2024", status: "Participant" },
   ],
@@ -22,7 +22,7 @@ const DATA = {
     { index: "04", title: "Arduino / Hardware", status: "Intermediate" },
   ],
   projects: [
-    { index: "01", title: "Arduino Deskbot", status: "Building" },
+    { index: "01", title: "Deskbot", status: "Building" },
     { index: "02", title: "2D Endless Runner", status: "Complete" },
     { index: "03", title: "Terminal CV Website", status: "Deployed" },
     { index: "04", title: "Minecraft Cinematics", status: "Hobby" },
@@ -30,7 +30,7 @@ const DATA = {
   experience: [
     { index: "01", title: "DIU Prompt Battle", status: "8th Place" },
     { index: "02", title: "NASA Space Apps", status: "2024" },
-    { index: "03", title: "Section 70_G Football", status: "Organizer" },
+    { index: "03", title: "Section 70_G Football Match", status: "Organizer" },
     { index: "04", title: "Iftar Party Event", status: "Coordinator" },
   ]
 };
