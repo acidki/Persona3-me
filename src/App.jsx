@@ -7,7 +7,6 @@ import main3 from './assets/main3.mp4'
 import P3Menu from './P3Menu'
 import VideoPage from './VideoPage'
 import ResumePage from './ResumePage'
-import SideProjects from './sideproj'
 import PageTransition from './PageTransition'
 import Socials from './Socials'
 import AboutMe from './AboutMe'
@@ -37,9 +36,7 @@ function AnimatedRoutes() {
         <Route path="/resume" element={
           <PageTransition><ResumePage src={main2} /></PageTransition>
         } />
-        <Route path="/sideprojects" element={
-          <PageTransition><SideProjects src={main2} /></PageTransition>
-        } />
+        
         <Route path="/socials" element={
           <PageTransition variant="socials"><Socials /></PageTransition>
         } />
