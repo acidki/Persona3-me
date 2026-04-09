@@ -13,6 +13,7 @@ A high-performance, interactive portfolio built with **React**, **Vite**, and **
   * **Custom Domain:** Fully deployed on a `.dev` domain with SSL via Vercel.
 
 ## 🎬 System Preview
+
 <p align="center">
 <video src="vid67.mp4" width="100%" autoplay loop muted playsinline></video>
 </p>
