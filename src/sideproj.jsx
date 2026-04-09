@@ -2,44 +2,21 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ITEMS = [
-  { id: "i", badge: "I", title: "EDUCATION", subtitle: "Daffodil Intl. University", rank: 3 },
-  { id: "ii", badge: "II", title: "SKILLS", subtitle: "C / Linux / Godot / Arduino", rank: 5 },
-  { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Deskbot / Godot Runner", rank: 5 },
-  { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "NASA Apps / Prompt Battle", rank: 4 },
+  { id: "i", badge: "I", title: "SIDE PROJECTS", subtitle: "Click a project to learn more", rank: 4 },
 ];
 
 const DATA = {
-  education: [
-    { index: "01", title: "TERMINAL CV WEBSITE", status: "Finished" },
-    { index: "02", title: "2D ENDLESS RUNNER GAME", status: "Demo Finished" },
-    { index: "03", title: "Deskbot", status: "Ongoing" },
-    { index: "04", title: "Persona Style CV Website", status: "Finished" },
+  projects: [
+    { index: "01", title: "2D ENDLESS RUNNER", status: "Complete" },
+    { index: "02", title: "DESKBOT", status: "Ongoing" },
+    { index: "03", title: "TERMINAL CV WEBSITE", status: "Deployed" },
+    { index: "04", title: "PERSONA CV WEBSITE", status: "Deployed" },
+    { index: "05", title: "MORE TO COME...", status: "Soon" },
   ],
-  //skills: [
-    //{ index: "01", title: "C Programming", status: "Expert" },
-    //{ index: "02", title: "Linux (Ubuntu)", status: "Advanced" },
-    //{ index: "03", title: "Godot Engine (GDScript)", status: "Intermediate" },
-    //{ index: "04", title: "Arduino / Hardware", status: "Intermediate" },
-  //],
-  //projects: [
-    //{ index: "01", title: "Arduino Deskbot", status: "Building" },
-    //{ index: "02", title: "2D Endless Runner", status: "Complete" },
-    //{ index: "03", title: "Terminal CV Website", status: "Deployed" },
-    //{ index: "04", title: "Minecraft Cinematics", status: "Hobby" },
-  //],
-  //experience: [
-    //{ index: "01", title: "DIU Prompt Battle", status: "8th Place" },
-    //{ index: "02", title: "NASA Space Apps", status: "2024" },
-    //{ index: "03", title: "Section 70_G Football", status: "Organizer" },
-    //{ index: "04", title: "Iftar Party Event", status: "Coordinator" },
-  //]
-};//
+};
 
 const DETAILS = [
-  "More in future",
-  //"Passionate about open-source tools, Linux customization, and game mechanics.",
-  //"Building interactive hardware inspired by Eilik using Arduino and TFT displays.",
-  //"Active participant in tech competitions and university community organizing."
+  "A growing collection of personal builds — games, hardware, and web experiments.",
 ];
 
 export default function ResumePage({ src }) {
@@ -62,13 +39,7 @@ export default function ResumePage({ src }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [navigate]);
 
-  // Helper to get the correct data array based on active index
-  const getActiveData = () => {
-    if (active === 0) return DATA.education;
-    if (active === 1) return DATA.skills;
-    if (active === 2) return DATA.projects;
-    return DATA.experience;
-  };
+  const getActiveData = () => DATA.projects;
 
   return (
     <div id="menu-screen">
@@ -380,7 +351,7 @@ export default function ResumePage({ src }) {
 
       <div className="resume-overlay">
         <div className="resume-stack">
-          <div className={`resume-list-tag${mounted ? " mounted" : ""}`}>DATA</div>
+          <div className={`resume-list-tag${mounted ? " mounted" : ""}`}>PROJECTS</div>
           {ITEMS.map((item, index) => (
             <div
               key={item.id}
