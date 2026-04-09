@@ -19,8 +19,8 @@ const ROLES = [
 
 const ITEMS = [
   {
-    id: "twitch", label: "YOUTUBE", handle: "@acid_ki", href: "https://www.youtube.com/@acid_ki", icon: "🎮", barIcon: icon1, bars: 1, newBars: [0], counts: ["56"],
-    links: ["https://youtu.be/Zac7qTDptKs?si=X-jiWA84GSFjbWqX"],
+    id: "youtube", label: "YOUTUBE", handle: "@acid_ki", href: "www.youtube.com/@acid_ki", icon: "🎮", barIcon: icon1, bars: 1, newBars: [0], counts: ["56"],
+    links: ["youtu.be/Zac7qTDptKs?si=X-jiWA84GSFjbWqX"],
     stats: [
       { tag: "SUB", value: "7", color: "#9147ff" },
       { tag: "VWR", value: "045",  color: "#bf94ff" },
@@ -28,7 +28,7 @@ const ITEMS = [
   },
   {
     id: "instagram", label: "INSTAGRAM", handle: "@acid_in_twilight", href: "https://www.instagram.com/acid_in_twilight/?hl=en", icon: "📷", barIcon: icon2, bars: 5, newBars: [1, 2], counts: ["3.4M", "2.5M", "676K", "412K", "198K"],
-    links: ["instagram.com/p/C4xQmRrNk2a", "instagram.com/reel/DUDyfxgkqhP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "instagram.com/reel/DT40Wbukm2e/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "instagram.com/p/DRSf3WUkhGb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "instagram.com/p/DPlIaGtkvmE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="],
+    links: ["instagram.com/p/C4xQmRrNk2a", "https://www.instagram.com/p/DRSf3WUkhGb/?hl=en&img_index=1", "https://www.instagram.com/p/DUDyfxgkqhP/?hl=en", "https://www.instagram.com/p/DVO7tMkk2-C/?hl=en&img_index=1", "https://www.instagram.com/p/DPlIaGtkvmE/?hl=en&img_index=1"],
     stats: [
       { tag: "FOL", value: "134", color: "#e1306c" },
       { tag: "PST", value: "51",  color: "#f77737" },
